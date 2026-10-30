@@ -42,6 +42,7 @@ body {
 }
 
 .title {
+  margin: 0;
   font-family: "Barrio", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -74,7 +75,7 @@ a {
 }
 
 a:hover {
-  color: #c62828;
+  color: #ed6e51;
 }
 
 .line {
@@ -99,16 +100,18 @@ a:hover {
   justify-items: end;
   min-height: 0;
   width: 100%;
+  container-type: size;
 }
 
 .media {
   width: min(66vmin, 560px);
-  max-height: 70dvh;
+  width: min(100cqh, 66vmin, 560px);
   height: auto;
   display: block;
   object-fit: contain;
   background: #fff;
-  transform: translateY(-7dvh);
+  aspect-ratio: 1 / 1;
+  transform: translateY(-2%);
   mix-blend-mode: multiply;
 }
 
@@ -118,11 +121,15 @@ a:hover {
   }
 
   .stage {
-    justify-items: start;
+    justify-items: end;
+    align-items: end;
+    overflow: hidden;
   }
 
   .media {
     width: min(80vmin, 420px);
+    width: min(100cqh, 80vmin, 420px);
+    transform: translate(19%, -2%);
   }
 }
 </style>
